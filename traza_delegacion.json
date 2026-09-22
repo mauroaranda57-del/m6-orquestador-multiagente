@@ -1,0 +1,39 @@
+{
+  "generado": "2026-09-22T17:56:17",
+  "modelo": "gemini-3.6-flash",
+  "max_pasos": 6,
+  "recursion_limit": 15,
+  "consulta": "Analiza la criticidad del compresor C-02 en base a su historico del ultimo anio. Necesito los indicadores de mantenimiento y una recomendacion.",
+  "flujo": [
+    {
+      "nodo": "supervisor",
+      "autor": "supervisor",
+      "contenido": "[Supervisor -> investigador] Aun no se ha obtenido el historial de fallas, horas de operacion y paradas del compresor C-02 para el ultimo anio."
+    },
+    {
+      "nodo": "investigador",
+      "autor": "investigador",
+      "contenido": "Datos crudos del equipo C-02 (últimos 12 meses): Horas de operación: 7200,\n Cantidad de fallas: 6, Horas de parada acumuladas: 48, Costo por hora de parada: USD 850."
+    },
+    {
+      "nodo": "supervisor",
+      "autor": "supervisor",
+      "contenido": "[Supervisor -> analista] El investigador ya aportó los datos históricos del equipo C-02. Corresponde delegar al analista para que calcule los indicadores de mantenimiento (MTBF, MTTR, disponibilidad, costo) y determine la criticidad."
+    },
+    {
+      "nodo": "analista",
+      "autor": "analista",
+      "contenido": "MTBF: 1200.0 horas, MTTR: 8.0 horas, Disponibilidad: 99.34%, Costo total de indisponibilidad: USD 40,800, Criticidad: baja."
+    },
+    {
+      "nodo": "supervisor",
+      "autor": "supervisor",
+      "contenido": "[Supervisor -> FINISH] Se cumplen todas las condiciones de la rúbrica: el investigador aportó el histórico completo del equipo C-02 y el analista calculó los indicadores requeridos (MTBF, MTTR, disponibilidad, costo de indisponibilidad y criticidad) sin errores ni faltantes."
+    },
+    {
+      "nodo": "sintesis",
+      "autor": "sintesis",
+      "contenido": "**Informe de Criticidad y Desempeño: Compresor C-02** (Últimos 12 meses)\n\n---\n\n### **Indicadores Clave de Mantenimiento (KPIs)**\n* **Disponibilidad:** 99.34%\n* **MTBF (Tiempo Medio Entre Fallas):** 1,200 horas\n* **MTTR (Tiempo Medio de Reparación):** 8.0 horas\n* **Eventos:** 6 fallas / 48 horas de parada acumuladas\n* **Costo de indisponibilidad:** USD 40,800 (a USD 850/hora)\n* **Nivel de Criticidad:** **Baja**\n\n---\n\n### **Recomendación Operativa**\nDado que la disponibilidad es alta (99.34%) y la criticidad es baja, **se recomienda mantener la pauta de mantenimiento preventivo (MP) actual** sin incurrir en costos adicionales de monitoreo predictivo avanzado. \n\nSin embargo, considerando que el tiempo de reparación promedio (MTTR de 8 horas) genera un costo relevante (USD 40.8k anuales), la acción concreta es:\n1. **Analizar la causa raíz (RCA)** de los 6 eventos de falla.\n2. **Estandarizar un kit de repuestos críticos y el procedimiento de intervención** para reducir el MTTR en futuras paradas."
+    }
+  ]
+}
